@@ -28,6 +28,15 @@ CREATE TABLE prices (
     price DECIMAL(10, 2)
 );
 ALTER TABLE clients 
-  ADD COLUMN  age INTEGER ;
+  ADD COLUMN age INTEGER ;
 
 DROP TABLE prices
+
+INSERT INTO cars(id, car_id, brand, model, car_year, color, price)
+VALUES(1, 1, 'Tesla', 'Model Y', 2020, 'Blue', 48990);
+
+INSERT INTO clients(id, name, email, phone, adress, age)
+VALUES(2, 'Lucas Cunha', 'lucas.cunhagalvao@gmail.com', '5583998822014', '25 Notre Dame Ave', 20)
+
+INSERT INTO seals (id, car_id, client_id, phone, seal_date, seal_value)
+VALUES(3, 1, 2, '83998822014', '24/03/2025', 43698)
