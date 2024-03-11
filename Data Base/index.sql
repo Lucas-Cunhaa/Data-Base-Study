@@ -39,4 +39,17 @@ INSERT INTO clients(id, name, email, phone, adress, age)
 VALUES(2, 'Lucas Cunha', 'lucas.cunhagalvao@gmail.com', '5583998822014', '25 Notre Dame Ave', 20)
 
 INSERT INTO seals (id, car_id, client_id, phone, seal_date, seal_value)
-VALUES(3, 1, 2, '83998822014', '24/03/2025', 43698)
+VALUES(3, 1, 2, '83998822014', '24/03/2025', 43698);
+
+UPDATE cars 
+SET color = 'Black Piano'
+WHERE id = 1;
+
+ALTER TABLE clients 
+RENAME COLUMN adress TO address
+
+SELECT *
+FROM clients
+INNER JOIN seals ON seals.client_id = clients.id;
+
+
